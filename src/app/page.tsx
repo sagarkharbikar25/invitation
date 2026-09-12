@@ -1,6 +1,15 @@
-import { redirect } from "next/navigation";
+import MainFlow from "@/components/MainFlow";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hack With India | Digital Invitation",
+  description: "Generate and download your personalized digital invitation for Hack With India.",
+};
 
 export default function Home() {
-  // Redirect to the default guest view
-  redirect("/invite/guest");
+  return (
+    <div className="bg-[#0a0a0a] min-h-screen">
+      <MainFlow />
+    </div>
+  );
 }
